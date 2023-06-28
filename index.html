@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/image-chess.webp">
+  <!-- bootstrap stylesheet -->
+  <link rel="stylesheet" href="./bootstrap/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- my stylesheet -->
+  <link rel="stylesheet" href="./assets/paint/style.css">
+
+  <title>Notifications page</title>
+  <script>var exports = {};</script>
+  <script type="module" src="./tsc/script.js"></script>
+</head>
+<body>
+  <div class="wrapper container-fluid">
+    
+    <div class="wrap container rounded-3 p-4" style="max-width: 800px;">
+      <header class="master d-flex align-items-center justify-content-between">
+        <h1 class="title">
+          Notifications <span class="count badge py-1">0</span>
+        </h1>
+  
+        <a class="mark-all">Mark all as read</a>
+      </header>
+  
+      <section class="notification-main d-flex flex-column-reverse">
+        <!-- This will be done by vanilla javascript -->
+      </section>
+    </div>
+  </div>
+  <script src="./bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

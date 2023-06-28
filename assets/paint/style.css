@@ -1,0 +1,94 @@
+@font-face {
+  font-family: jarkaBold;
+  src: url(./../fonts/static/PlusJakartaSans-ExtraBold.ttf);
+}
+@font-face {
+  font-family: jarkaMed;
+  src: url(./../fonts/static/PlusJakartaSans-Medium.ttf);
+}
+.wrapper {
+  padding: 30px 0;
+  background-color: hsl(205, 33%, 90%);
+  min-height: 100vh;
+}
+.wrapper .wrap {
+  background-color: hsl(0, 0%, 100%);
+}
+.wrapper .wrap .master .title {
+  color: hsl(224, 21%, 14%);
+  font-family: jarkaBold;
+}
+.wrapper .wrap .master .title .count {
+  background-color: hsl(219, 85%, 26%);
+}
+.wrapper .wrap .master .mark-all {
+  text-decoration: none;
+  font-family: jarkaMed;
+  color: hsl(219, 14%, 63%);
+  cursor: pointer;
+}
+.wrapper .wrap .master .mark-all:hover {
+  color: hsl(219, 85%, 26%);
+}
+.wrapper .wrap .notification-main .single-notification {
+  cursor: pointer;
+  clip-path: inset(0 50% 0 40%);
+  transition: clip-path 0.3s 0.2s;
+}
+.wrapper .wrap .notification-main .single-notification.activate {
+  clip-path: inset(0 0 0 0);
+}
+.wrapper .wrap .notification-main .single-notification.unread {
+  background-color: hsl(210, 60%, 98%);
+  transition: 0.3s;
+}
+.wrapper .wrap .notification-main .single-notification.unread:hover {
+  transform: scale(1.03);
+}
+.wrapper .wrap .notification-main .single-notification.read {
+  background-color: hsl(0, 0%, 100%);
+}
+.wrapper .wrap .notification-main .single-notification.read .notification-box .notification .indicate {
+  background-color: transparent;
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .notification {
+  font-family: jarkaMed;
+  color: hsl(219, 12%, 42%);
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .notification .indicate {
+  background-color: hsl(1, 90%, 64%);
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .notification .name {
+  color: hsl(224, 21%, 14%);
+  font-family: jarkaBold;
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .notification .name:hover {
+  color: hsl(219, 85%, 26%);
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .notification .post-name {
+  color: hsl(219, 12%, 42%);
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .notification .post-name:hover {
+  color: hsl(219, 85%, 26%);
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .time {
+  color: hsl(219, 14%, 63%);
+  font-family: jarkaBold;
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .message {
+  border: solid 2px hsl(210, 60%, 98%);
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .message:hover {
+  border: none;
+  background-color: hsl(205, 33%, 90%);
+}
+.wrapper .wrap .notification-main .single-notification .notification-box .message .message-text {
+  font-family: jarkaMed;
+  color: hsl(219, 14%, 63%);
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 0;
+  }
+}

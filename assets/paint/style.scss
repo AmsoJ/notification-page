@@ -1,0 +1,109 @@
+@import './color';
+
+@font-face {
+    font-family: jarkaBold;
+    src: url(./../fonts/static/PlusJakartaSans-ExtraBold.ttf);
+}
+@font-face {
+    font-family: jarkaMed;
+    src: url(./../fonts/static/PlusJakartaSans-Medium.ttf);
+}
+
+.wrapper {
+    padding: 30px 0;
+    background-color: $Light-grayish-blue;
+    min-height: 100vh;
+    .wrap {
+        background-color: $White;
+        .master {
+            .title {
+                color: $Very-dark-blue;
+                font-family: jarkaBold;
+                .count {
+                    background-color: $Blue;
+                }
+            }
+            .mark-all {
+                text-decoration: none;
+                font-family: jarkaMed;
+                color: $Grayish-blue;
+                cursor: pointer;
+                &:hover {
+                    color: $Blue;
+                }
+            }
+        }
+        .notification-main {
+            .single-notification {
+                cursor: pointer;
+                // transform: scale(0);
+                clip-path: inset(0 50% 0 40%);
+                // position: absolute;
+                // opacity: 0;
+                transition:clip-path .3s .2s;
+                &.activate {
+                    clip-path: inset(0 0 0 0);
+                    // transform: scale(1);
+                    // position: static;
+                    // opacity: 1;
+                }
+                &.unread {
+                    background-color: $Very-light-grayish-blue;
+                    transition: .3s;
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+                }
+                &.read {
+                    background-color: $White;
+                    .notification-box .notification .indicate {
+                        background-color: transparent;
+                    }
+                }
+                .notification-box {
+                    .notification {
+                        font-family: jarkaMed;
+                        color: $Dark-grayish-blue;
+                        .indicate {
+                            background-color: $Red;
+                        }
+                        .name {
+                            color: $Very-dark-blue;
+                            font-family: jarkaBold;
+                            &:hover {
+                                color: $Blue
+                            }
+                        }
+                        .post-name {
+                            color: $Dark-grayish-blue;
+                            &:hover {
+                                color: $Blue;
+                            }
+                        }
+                    }
+                    .time {
+                        color: $Grayish-blue;
+                        font-family: jarkaBold;
+                    }
+                    .message {
+                        border: solid 2px $Very-light-grayish-blue;
+                        &:hover {
+                            border: none;
+                            background-color: $Light-grayish-blue;
+                        }
+                        .message-text {
+                            font-family: jarkaMed;
+                            color: $Grayish-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 0;
+    }
+}
